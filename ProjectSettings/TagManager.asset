@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Target
+  - Other
+  - Wall
+  - Letter
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - FallingMoji
+  - HoldMoji
+  - Wall
+  - StaFin
+  - Pause
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1090324035
+    locked: 0
+  - name: Player
+    uniqueID: 1082640655
+    locked: 0
+  - name: Goal_Wall
+    uniqueID: 474777917
+    locked: 0
+  - name: ojamabar
+    uniqueID: 3539106479
+    locked: 0
+  - name: Moji
+    uniqueID: 3727406529
+    locked: 0
+  - name: Goal_Ring
+    uniqueID: 3974914991
+    locked: 0
+  - name: UI
+    uniqueID: 2756449463
+    locked: 0
+  - name: Effect
+    uniqueID: 4252868993
+    locked: 0
+  - name: Mobile
+    uniqueID: 2301984161
+    locked: 0
+  - name: POP
+    uniqueID: 3357516091
+    locked: 0
+  m_RenderingLayers:
+  - Default

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: f74b32fb2bd160e479a9b8a9ce26c7e1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - barPrefab1: {instanceID: 0}
+  - barPrefab2: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

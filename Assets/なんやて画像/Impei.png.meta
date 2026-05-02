@@ -1,0 +1,1248 @@
+fileFormatVersion: 2
+guid: 376fe7910db9f1e4f9f6249ccef57cf3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6801612527801629573
+    second: Impei_0
+  - first:
+      213: -4351085452455463427
+    second: Impei_1
+  - first:
+      213: -5456773830516450528
+    second: Impei_2
+  - first:
+      213: 8939027531750010592
+    second: Impei_3
+  - first:
+      213: -6149361123346467021
+    second: Impei_4
+  - first:
+      213: -7328121651640201934
+    second: Impei_5
+  - first:
+      213: -2873036949371842497
+    second: Impei_6
+  - first:
+      213: 7079248069192683528
+    second: Impei_7
+  - first:
+      213: -9065885332827828799
+    second: Impei_8
+  - first:
+      213: 5397189135635708977
+    second: Impei_9
+  - first:
+      213: 5433841416454671599
+    second: Impei_10
+  - first:
+      213: -2480049643590026659
+    second: Impei_11
+  - first:
+      213: 5035765303992725255
+    second: Impei_12
+  - first:
+      213: 5480273337405149907
+    second: Impei_13
+  - first:
+      213: 547670383105919184
+    second: Impei_14
+  - first:
+      213: 3251474319559740870
+    second: Impei_15
+  - first:
+      213: 7948933398977179775
+    second: Impei_16
+  - first:
+      213: -4944650723007977087
+    second: Impei_17
+  - first:
+      213: 3602024110932003265
+    second: Impei_18
+  - first:
+      213: -415067674330890082
+    second: Impei_19
+  - first:
+      213: 6700334660877838313
+    second: Impei_20
+  - first:
+      213: -7431481587201505842
+    second: Impei_21
+  - first:
+      213: -8386789855779243287
+    second: Impei_22
+  - first:
+      213: -3067293783276066533
+    second: Impei_23
+  - first:
+      213: 8623962474200227431
+    second: Impei_24
+  - first:
+      213: 1869700306752766390
+    second: Impei_25
+  - first:
+      213: 3555021856573024818
+    second: Impei_26
+  - first:
+      213: 932402474533043516
+    second: Impei_27
+  - first:
+      213: 8543637536031538155
+    second: Impei_28
+  - first:
+      213: 6002176615955903328
+    second: Impei_29
+  - first:
+      213: -5170943585426014444
+    second: Impei_30
+  - first:
+      213: 6444379392729952758
+    second: Impei_31
+  - first:
+      213: -6819542596084247935
+    second: Impei_32
+  - first:
+      213: -5311152431177823798
+    second: Impei_33
+  - first:
+      213: -1361391383603476786
+    second: Impei_34
+  - first:
+      213: 1614425277471036255
+    second: Impei_35
+  - first:
+      213: 3587882411588210879
+    second: Impei_36
+  - first:
+      213: 6955590204942429764
+    second: Impei_37
+  - first:
+      213: 4409956752954624736
+    second: Impei_38
+  - first:
+      213: -8343350551223001084
+    second: Impei_39
+  - first:
+      213: -1570451376280691726
+    second: Impei_40
+  - first:
+      213: 2057469239898299168
+    second: Impei_41
+  - first:
+      213: 8304559091501481441
+    second: Impei_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Impei_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 350
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58b767bbe8e246e50800000000000000
+      internalID: 6801612527801629573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_1
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 0
+        width: 645
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5b50385d6dd93c0800000000000000
+      internalID: -4351085452455463427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_2
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 747
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b5b64cc15a544b0800000000000000
+      internalID: -5456773830516450528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_3
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 737
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee656bdd2ecd0c70800000000000000
+      internalID: 8939027531750010592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_4
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 257
+        width: 338
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337365793a419aaa0800000000000000
+      internalID: -6149361123346467021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_5
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 715
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23d03231f284d4a90800000000000000
+      internalID: -7328121651640201934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 591
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f309e16dd1ce028d0800000000000000
+      internalID: -2873036949371842497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_7
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 596
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80099198c9a8e3260800000000000000
+      internalID: 7079248069192683528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_8
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 579
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd8f5aa2518f2280800000000000000
+      internalID: -9065885332827828799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_9
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 570
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13cf92f5ceaa6ea40800000000000000
+      internalID: 5397189135635708977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_10
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 546
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec06918af1e86b40800000000000000
+      internalID: 5433841416454671599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_11
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 551
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a7b703df7159dd0800000000000000
+      internalID: -2480049643590026659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_12
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 526
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f29b40dd1a2e540800000000000000
+      internalID: 5035765303992725255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_13
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 535
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d2141c8097dd0c40800000000000000
+      internalID: 5480273337405149907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_14
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 483
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d8c70fcf47b99700800000000000000
+      internalID: 547670383105919184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_15
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 453
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cdc9a5aaae8f1d20800000000000000
+      internalID: 3251474319559740870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_16
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 444
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70f545afc8405e60800000000000000
+      internalID: 7948933398977179775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_17
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 440
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1892bb48d52116bb0800000000000000
+      internalID: -4944650723007977087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_18
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 411
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c98e7438d5fcf130800000000000000
+      internalID: 3602024110932003265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_19
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 344
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9082c936226d3af0800000000000000
+      internalID: -415067674330890082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_20
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 346
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e76cd9cfde5cfc50800000000000000
+      internalID: 6700334660877838313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_21
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 310
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec58fffbed21ed890800000000000000
+      internalID: -7431481587201505842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_22
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 60
+        width: 371
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eabd60bf032c9b80800000000000000
+      internalID: -8386789855779243287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_23
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 263
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19e01a2e88ce65d0800000000000000
+      internalID: -3067293783276066533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_24
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 100
+        width: 114
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ed007bd287ea770800000000000000
+      internalID: 8623962474200227431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_25
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 207
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b1007cd58282f910800000000000000
+      internalID: 1869700306752766390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_26
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 214
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ae8c11b89f55130800000000000000
+      internalID: 3555021856573024818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_27
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 191
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3dbc3a4c1f80fc00800000000000000
+      internalID: 932402474533043516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_28
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 190
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beb7ad8a219119670800000000000000
+      internalID: 8543637536031538155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_29
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 194
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0633531d4d30c4350800000000000000
+      internalID: 6002176615955903328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_30
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 182
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ff815b43e1d38b0800000000000000
+      internalID: -5170943585426014444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_31
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 140
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f13485f9e80f6950800000000000000
+      internalID: 6444379392729952758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_32
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 129
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182d0cde32e1c51a0800000000000000
+      internalID: -6819542596084247935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_33
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 118
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac981b7e00ffa46b0800000000000000
+      internalID: -5311152431177823798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_34
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 68
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec68904efbd5b1de0800000000000000
+      internalID: -1361391383603476786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_35
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 73
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53921c7c37976610800000000000000
+      internalID: 1614425277471036255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_36
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 68
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0569e3b08bac130800000000000000
+      internalID: 3587882411588210879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_37
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 51
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ea7c86078378060800000000000000
+      internalID: 6955590204942429764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_38
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 62
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea02b64d40533d30800000000000000
+      internalID: 4409956752954624736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_39
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 59
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4002bcde0e6763c80800000000000000
+      internalID: -8343350551223001084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_40
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 54
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb14cb3bc2a43ae0800000000000000
+      internalID: -1570451376280691726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_41
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 58
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b5e6c6f599d8c10800000000000000
+      internalID: 2057469239898299168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impei_42
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 52
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1edbf298e78bf3370800000000000000
+      internalID: 8304559091501481441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Impei_0: 6801612527801629573
+      Impei_1: -4351085452455463427
+      Impei_10: 5433841416454671599
+      Impei_11: -2480049643590026659
+      Impei_12: 5035765303992725255
+      Impei_13: 5480273337405149907
+      Impei_14: 547670383105919184
+      Impei_15: 3251474319559740870
+      Impei_16: 7948933398977179775
+      Impei_17: -4944650723007977087
+      Impei_18: 3602024110932003265
+      Impei_19: -415067674330890082
+      Impei_2: -5456773830516450528
+      Impei_20: 6700334660877838313
+      Impei_21: -7431481587201505842
+      Impei_22: -8386789855779243287
+      Impei_23: -3067293783276066533
+      Impei_24: 8623962474200227431
+      Impei_25: 1869700306752766390
+      Impei_26: 3555021856573024818
+      Impei_27: 932402474533043516
+      Impei_28: 8543637536031538155
+      Impei_29: 6002176615955903328
+      Impei_3: 8939027531750010592
+      Impei_30: -5170943585426014444
+      Impei_31: 6444379392729952758
+      Impei_32: -6819542596084247935
+      Impei_33: -5311152431177823798
+      Impei_34: -1361391383603476786
+      Impei_35: 1614425277471036255
+      Impei_36: 3587882411588210879
+      Impei_37: 6955590204942429764
+      Impei_38: 4409956752954624736
+      Impei_39: -8343350551223001084
+      Impei_4: -6149361123346467021
+      Impei_40: -1570451376280691726
+      Impei_41: 2057469239898299168
+      Impei_42: 8304559091501481441
+      Impei_5: -7328121651640201934
+      Impei_6: -2873036949371842497
+      Impei_7: 7079248069192683528
+      Impei_8: -9065885332827828799
+      Impei_9: 5397189135635708977
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
