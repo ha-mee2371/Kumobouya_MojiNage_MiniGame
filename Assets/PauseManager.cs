@@ -1,6 +1,7 @@
 using UnityEngine; // Unityの基本クラスを使用するための宣言
+using UnityEngine.SceneManagement; // シーン切り替え機能を使うための宣言
 
-// ゲームの一時停止（ポーズ）と再開を管理する司令塔クラス
+// ゲームの一時停止と再開を管理する司令塔クラス
 public class PauseManager : MonoBehaviour 
 {
     private bool isPaused = false; // 現在ゲームが止まっているかどうかを記憶する
@@ -13,6 +14,9 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1f; // ゲーム内の時間の進み方を通常に設定
 
+        // 重力を初期値にリセットする処理
+        Physics2D.gravity = new Vector2(0, -9.81f);
+
         // ポーズメニューが表示されたままなら隠しておく
         if (pauseUIPanel != null)
         {
@@ -23,7 +27,7 @@ public class PauseManager : MonoBehaviour
     // ボタンが押されるたびに停止と再開を切り替える
     public void TogglePause()
     {
-        // 現在の状態を反転させる（trueならfalseに、falseならtrueに！）
+        // 現在の状態を反転させる（trueならfalseに、falseならtrueに）
         isPaused = !isPaused;
 
         if (isPaused) // 停止状態になった時の処理

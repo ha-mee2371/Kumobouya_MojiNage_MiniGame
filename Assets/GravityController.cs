@@ -13,126 +13,137 @@ public class PeriodicGravity : MonoBehaviour
 
     public GameObject GravityImage; // 重力発生を視覚的に伝えるエフェクト
     public TextMeshProUGUI timerText; // 次の重力発生までのカウントダウン表示
+    public Image buttonImage; // ボタンの見た目を変更するための参照
 
     private float originalGravity; // 元々の世界の重力値を保存しておく変数
     private PlayerController playerScript; // プレイヤーの移動速度を直接書き換えるための参照
-    private CanvasGroup canvasGroup; // UIフェード演出のためのコンポーネント
+    private CanvasGroup canvasGroup; // UIフェード演出のためのコンポ―ネント
 
     private float currentTimer; // 現在の経過時間を計測する内部変数
-    
     public bool isHeavyMode { get; private set; } = false; // 現在重力モードかどうか
-
     private float basePlayerSpeed; // プレイヤーの本来の移動速度を保存
-    
-    // ゲーム開始時の初期化
+
+    private bool isPaused = false; // フリーモード用のポーズフラグ
+
     void Start() 
     {
-        if (timerText != null && GameManager.instance != null) // GameManagerからテーマカラーを引き継いでUIの色を統一する
+        // ホバーの色を活かすため、Start時のみ適用
+        if (timerText != null && GameManager.instance != null)
         {
             timerText.color = GameManager.instance.selectedColor;
         }
 
-        originalGravity = Physics2D.gravity.y; // 初期状態の重力を記憶しておく重要な処理
+        originalGravity = Physics2D.gravity.y;
         
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player"); // プレイヤーをタグで検索
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
         {
             playerScript = playerObj.GetComponent<PlayerController>();
-            if (playerScript != null) basePlayerSpeed = playerScript.moveSpeed; // 元の速度をメモ
+            if (playerScript != null) basePlayerSpeed = playerScript.moveSpeed;
         }
 
-        if (GravityImage != null) // 演出用UIのセットアップ
+        if (GravityImage != null)
         {
             canvasGroup = GravityImage.GetComponent<CanvasGroup>();
-            if (canvasGroup == null)
-            {
-                canvasGroup = GravityImage.AddComponent<CanvasGroup>(); // コンポーネントがなければ自動で足す
-            }
-            
+            if (canvasGroup == null) canvasGroup = GravityImage.AddComponent<CanvasGroup>();
             GravityImage.SetActive(true); 
-            canvasGroup.alpha = 0f; // 最初は隠しておく
+            canvasGroup.alpha = 0f;
         }
 
         currentTimer = waitTime;
-        StartCoroutine(GravityLoop()); // 永久ループする重力サイクルを開始
+        StartCoroutine(GravityLoop());
     }
 
-    // ゲーム終了時などに外部（GameManager等）から呼ばれる停止関数
-    public void StopGravityLoop() 
+    // フリーモードのON/OFF切り替え用に関数を追加
+    public void SetPause(bool pause)
     {
-        StopAllCoroutines(); // 全てのループを停止
-        
-        Physics2D.gravity = new Vector2(0, originalGravity); // 重力を元に戻す
-        
-        if (playerScript != null)
+        isPaused = pause;
+
+        // ボタンの色を切り替える（停止中は暗く、動作中は白に）
+        if (buttonImage != null)
         {
-            playerScript.moveSpeed = basePlayerSpeed; // プレイヤーの速度も元通り
+            buttonImage.color = pause ? Color.gray : Color.white;
         }
 
+        if (isPaused)
+        {
+            // 停止：重力と速度を戻し、カウントを15に固定
+            Physics2D.gravity = new Vector2(0, originalGravity);
+            if (playerScript != null) playerScript.moveSpeed = basePlayerSpeed;
+            if (canvasGroup != null) canvasGroup.alpha = 0f;
+            isHeavyMode = false;
+            currentTimer = waitTime; 
+        }
+        else
+        {
+            // 再開：15からカウントダウン
+            currentTimer = waitTime;
+        }
+    }
+
+    public void StopGravityLoop() 
+    {
+        StopAllCoroutines();
+        Physics2D.gravity = new Vector2(0, originalGravity);
+        if (playerScript != null) playerScript.moveSpeed = basePlayerSpeed;
         if (timerText != null) timerText.text = "";
         if (canvasGroup != null) canvasGroup.alpha = 0f;
-
         isHeavyMode = false;
     }
 
-    // 何らかのアクションで重力発生を遅らせる関数
+    // 重力までの時間をリセットする機能（フリーモードでも呼ばれる）
     public void ResetTimer() 
     {
-        if (!isHeavyMode) // 重力発生中でなければタイマーをリセット可能
+        if (!isHeavyMode && !isPaused) // 発生中や停止中でなければリセット可能
         {
             currentTimer = waitTime;
             Debug.Log("重力までの時間を延長ぼうや");
         }
     }
 
-    // 毎フレームのタイマー更新
     void Update() 
     {
-        if (!isHeavyMode && currentTimer > 0) // 平和タイム中だけカウントダウン
+        // システム停止中はカウントを15で固定して表示
+        if (isPaused) 
+        {
+            currentTimer = waitTime;
+            if (timerText != null) timerText.text = Mathf.CeilToInt(currentTimer).ToString("00");
+            return;
+        }
+
+        if (!isHeavyMode && currentTimer > 0) 
         {
             currentTimer -= Time.deltaTime;
         }
 
-        if (timerText != null) // UIに秒数を表示。
+        if (timerText != null) 
         {
-            timerText.text = Mathf.CeilToInt(currentTimer).ToString("00");
+            // デバフ発動中のタイマーは00
+            if (isHeavyMode) timerText.text = "00";
+            else timerText.text = Mathf.CeilToInt(currentTimer).ToString("00");
         }
     }
 
-    // 重力のON/OFFを管理するメインコルーチン
     IEnumerator GravityLoop() 
     {
         while (true) 
         {
-            // 平和タイムの待機
-            isHeavyMode = false;
-            while (currentTimer > 0.001f) 
-            {
-                yield return null; 
-            }
-            currentTimer = 0;
+            // ポーズ中かタイマーがある間は待機
+            while (isPaused || currentTimer > 0.001f) yield return null; 
 
-            // 重力開始の物理演算操作
             isHeavyMode = true; 
-            Debug.Log("にんにんぼうやが重力デバフを発動");
             Physics2D.gravity = new Vector2(0, originalGravity * gravityMultiplier);
-            
-            // プレイヤーの移動能力を制限する処理
-            if (playerScript != null) 
-            {
-                playerScript.moveSpeed = basePlayerSpeed * slowSpeedMultiplier;
-            }
+            if (playerScript != null) playerScript.moveSpeed = basePlayerSpeed * slowSpeedMultiplier;
 
-            // 視覚的な演出
             if (canvasGroup != null)
             {
                 canvasGroup.alpha = 1f;
                 yield return new WaitForSeconds(0.6f);
-
                 float duration = 1.0f; 
                 float fadeTime = 0f;
                 while (fadeTime < duration) 
                 {
+                    if (isPaused) break; // 途中でオフにされたら中断
                     fadeTime += Time.deltaTime;
                     canvasGroup.alpha = Mathf.Lerp(1f, 0f, fadeTime / duration);
                     yield return null;
@@ -140,25 +151,25 @@ public class PeriodicGravity : MonoBehaviour
                 canvasGroup.alpha = 0f;
             }
 
-            // 重力持続時間の待機
-            float remainingHeavyTime = heavyTime - 1.6f;
-            if (remainingHeavyTime > 0)
+            float elapsed = 0;
+            while (elapsed < (heavyTime - 1.6f))
             {
-                yield return new WaitForSeconds(remainingHeavyTime);
+                if (isPaused) break;
+                elapsed += Time.deltaTime;
+                yield return null;
             }
 
-            // 世界を平和に戻すリセット処理
-            Debug.Log("にんにんぼうやは去ったようだ");
             Physics2D.gravity = new Vector2(0, originalGravity);
-            
-            // プレイヤーの速度を元に戻す
-            if (playerScript != null) 
-            {
-                playerScript.moveSpeed = basePlayerSpeed;
-            }
-
+            if (playerScript != null) playerScript.moveSpeed = basePlayerSpeed;
             isHeavyMode = false; 
-            currentTimer = waitTime;
+            if (!isPaused) currentTimer = waitTime;
         }
+    }
+
+    // ボタンから呼ぶための「切り替え」用関数
+    public void TogglePause()
+    {
+        // 今の状態を反転させる（trueならfalse、falseならtrueに）
+        SetPause(!isPaused);
     }
 }

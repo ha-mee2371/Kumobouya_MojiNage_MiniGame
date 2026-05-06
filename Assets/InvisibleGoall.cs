@@ -1,152 +1,169 @@
 using UnityEngine; // Unityの基本機能を使うための宣言
 using System.Collections; // コルーチン（IEnumerator）を使うための宣言
-using System.Collections.Generic; // リストなどのコレクションを使うための宣言
-using UnityEngine.UI; // UIコンポーネントを操作するための宣言
 using TMPro; // TextMeshProを操作するための宣言
+using UnityEngine.UI; // UIを操作するための宣言
 
 // 一定時間ごとにゴールを隠蔽して難易度を上げるクラス
 public class InvisibleGoal : MonoBehaviour 
 {
-    public float waitTime = 15.0f;     // ゴールが見えている時間
-    public float invisibleTime = 5.0f; // ゴールが姿を消す時間
+    [Header("隠蔽のタイミング設定")]
+    public float waitTime = 15.0f;     // ゴールが見えている（平和な）時間
+    public float invisibleTime = 5.0f; // ゴールが姿を消す（デバフ）時間
 
-    public GameObject HideImage; // 隠蔽が始まったことを知らせるエフェクト
-    public TextMeshProUGUI timerText; // 隠蔽までのカウントダウンを表示する
+    [Header("UI・演出の参照")]
+    public GameObject HideImage; // 隠蔽が始まったことを知らせるエフェクト画像
+    public TextMeshProUGUI timerText; // 隠蔽（デバフ発動）までのカウントダウンを表示するUI
+    public Image buttonImage; // ボタンの見た目を変更するための参照
 
-    private Renderer[] allRenderers; // ゴールに含まれる全ての描画コンポーネントを保持する
-    private TMPro.TMP_Text[] allTexts; // ゴールに含まれる全ての文字コンポーネントを保持する
-    private CanvasGroup canvasGroup; // 演出用パネルの透明度を滑らかに操るためのコンポーネント
+    private CanvasGroup canvasGroup; // 演出用画像の透明度を制御するためのコンポーネント
 
-    private float currentTimer; // 次のイベントまでの残り時間を計測する変数
-
-    public bool isInvisibleMode { get; private set; } = false; // 現在隠蔽中かどうか
+    private float currentTimer; // 次の隠蔽発動までの残り時間を計算する変数
+    public bool isInvisibleMode { get; private set; } = false; // 現在、隠蔽（デバフ）中かどうかを外部に教えるフラグ
+    private bool isPaused = false; // フリーモードのボタン操作で、このシステム自体を止めているかどうかのフラグ
 
     // ゲーム開始時の初期設定
     void Start() 
     {
-        // GameManagerから選択された色をタイマーに反映する
+        // GameManagerに保存されている選んだ色をUIに適用する
         if (timerText != null && GameManager.instance != null)
         {
             timerText.color = GameManager.instance.selectedColor;
         }
 
-        // 子供のオブジェクトも含めて、消すべき描画コンポーネントを全てリストアップ
-        allRenderers = GetComponentsInChildren<Renderer>();
-        allTexts = GetComponentsInChildren<TMPro.TMP_Text>();
-
-        // 演出用画像の準備
+        // 隠蔽演出用画像の準備
         if (HideImage != null)
         {
-            canvasGroup = HideImage.GetComponent<CanvasGroup>();
-            if (canvasGroup == null)
-            {
-                canvasGroup = HideImage.AddComponent<CanvasGroup>();
-            }
-            HideImage.SetActive(true);
-            canvasGroup.alpha = 0f; // 最初は透明
+            canvasGroup = HideImage.GetComponent<CanvasGroup>(); 
+            if (canvasGroup == null) canvasGroup = HideImage.AddComponent<CanvasGroup>(); 
+            HideImage.SetActive(true); 
+            canvasGroup.alpha = 0f; 
         }
 
-        currentTimer = waitTime; // タイマーを初期化
-        StartCoroutine(GoalFlashLoop()); // 隠蔽ループを開始
+        currentTimer = waitTime; 
+        StartCoroutine(GoalFlashLoop()); 
     }
 
-    // ゲーム終了時などにループを止めて、ゴールを強制的に再表示させる関数
+    // フリーモードのボタンから呼ばれる、システムのON/OFF切り替え関数
+    public void SetPause(bool pause)
+    {
+        isPaused = pause; 
+
+        // ボタンの色を切り替える（停止中は暗く、動作中は白に）
+        if (buttonImage != null)
+        {
+            buttonImage.color = pause ? Color.gray : Color.white;
+        }
+
+        if (isPaused)
+        {
+            // 停止：デバフを解除し、カウントを15にキープする
+            SetGoalVisibility(true); 
+            if (canvasGroup != null) canvasGroup.alpha = 0f; 
+            isInvisibleMode = false; 
+            currentTimer = waitTime; 
+        }
+        else
+        {
+            // 再開：15からカウントダウンを開始する
+            currentTimer = waitTime; 
+        }
+    }
+
     public void StopInvisibleLoop()
     {
-        StopAllCoroutines(); // 進行中のコルーチンを全て止める
-        
-        SetGoalVisibility(true); // ゴールを見える状態に戻す
-        
-        if (timerText != null) timerText.text = "";
-        if (canvasGroup != null) canvasGroup.alpha = 0f;
-
-        isInvisibleMode = false;
-        Debug.Log("タイムアップ");
+        StopAllCoroutines(); 
+        SetGoalVisibility(true); 
+        if (timerText != null) timerText.text = ""; 
+        if (canvasGroup != null) canvasGroup.alpha = 0f; 
+        isInvisibleMode = false; 
     }
 
-    // 特定のアクション（アイテム獲得など）で隠蔽を先延ばしにするための関数
     public void ResetTimer()
     {
-        if (!isInvisibleMode) // すでに隠れている時はリセットできない
+        if (!isInvisibleMode && !isPaused)
+        {
+            currentTimer = waitTime; 
+        }
+    }
+
+    void Update() 
+    {
+        // システム停止中はカウントを15で固定して表示
+        if (isPaused) 
         {
             currentTimer = waitTime;
-            Debug.Log("隠蔽までの時間を延長ぼうや");
+            if (timerText != null) timerText.text = Mathf.CeilToInt(currentTimer).ToString("00");
+            return;
+        }
+
+        if (!isInvisibleMode && currentTimer > 0) currentTimer -= Time.deltaTime;
+
+        if (timerText != null) 
+        {
+            if (isInvisibleMode) timerText.text = "00";
+            else timerText.text = Mathf.CeilToInt(currentTimer).ToString("00");
         }
     }
 
-    void Update() // 毎フレームのタイマー更新処理death
-    {
-        if (!isInvisibleMode && currentTimer > 0) // 見えている間だけカウントダウン
-        {
-            currentTimer -= Time.deltaTime;
-        }
-
-        if (timerText != null) // UIに残り秒数を「00」形式で表示
-        {
-            timerText.text = Mathf.CeilToInt(currentTimer).ToString("00");
-        }
-    }
-
-    // 隠蔽と表示を繰り返すメインループ
     IEnumerator GoalFlashLoop()
     {
-        while (true)
+        while (true) 
         {
-            // 平和タイムの待機処理
-            isInvisibleMode = false;
-            while (currentTimer > 0.001f) { yield return null; }
-            currentTimer = 0;
+            while (isPaused || currentTimer > 0.001f) yield return null;
 
-            // 隠蔽発動
             isInvisibleMode = true; 
-            Debug.Log("にんにんぼうやが隠蔽デバフを発動");
-            
-            SetGoalVisibility(false); // 描画をOFF
+            SetGoalVisibility(false); // 最新リスト取得
 
-            // 隠蔽開始の合図を滑らかにフェードアウトさせる
             if (canvasGroup != null)
             {
                 canvasGroup.alpha = 1f; 
-                yield return new WaitForSeconds(0.6f);
-
+                yield return new WaitForSeconds(0.6f); 
                 float duration = 1.0f; 
                 float currentTime = 0f;
                 while (currentTime < duration)
                 {
+                    if (isPaused) break; 
                     currentTime += Time.deltaTime;
-                    canvasGroup.alpha = Mathf.Lerp(1f, 0f, currentTime / duration);
+                    canvasGroup.alpha = Mathf.Lerp(1f, 0f, currentTime / duration); 
                     yield return null;
                 }
-                canvasGroup.alpha = 0f;
+                canvasGroup.alpha = 0f; 
             }
 
-            // 指定された時間だけ隠蔽状態をキープ
-            float remainingInvisibleTime = invisibleTime - 1.6f;
-            if (remainingInvisibleTime > 0)
+            float elapsed = 0;
+            while (elapsed < (invisibleTime - 1.6f))
             {
-                yield return new WaitForSeconds(remainingInvisibleTime);
+                if (isPaused) break; 
+                elapsed += Time.deltaTime;
+                yield return null;
             }
 
-            // 隠蔽終了、再び姿を現す
-            Debug.Log("にんにんぼうやは去ったようだ");
             SetGoalVisibility(true); 
-            isInvisibleMode = false;
-
-            currentTimer = waitTime; // タイマーを戻して次のサイクルへ
+            isInvisibleMode = false; 
+            if (!isPaused) currentTimer = waitTime; 
         }
     }
 
-    // 全ての描画コンポーネントを一括でON/OFFする
+    // 表示・非表示を切り替える際に、その都度最新の子供たちを見つける
     void SetGoalVisibility(bool isVisible)
     {
-        foreach (Renderer r in allRenderers)
+        // レンダラー（画像など）を取得して切り替え
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        foreach (Renderer r in renderers) if (r != null) r.enabled = isVisible;
+        
+        // テキストパーツを取得して切り替え
+        TMPro.TMP_Text[] texts = GetComponentsInChildren<TMPro.TMP_Text>();
+        foreach (TMPro.TMP_Text t in texts)
         {
-            if (r != null) r.enabled = isVisible; // Rendererを操作
+            // カウントダウン用のタイマーだけは消さない
+            if (t != null && t != timerText) t.enabled = isVisible;
         }
+    }
 
-        foreach (TMPro.TMP_Text t in allTexts)
-        {
-            if (t != null) t.enabled = isVisible; // TextMeshProを操作
-        }
+    // ボタンから呼ぶための「切り替え」用関数
+    public void TogglePause()
+    {
+        // 今の状態を反転させる（trueならfalse、falseならtrueに）
+        SetPause(!isPaused);
     }
 }
