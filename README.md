@@ -187,6 +187,3 @@ Ver1.0: Release!!!
 - Google AI (Gemini)  
 
 ※WebGLビルド後のIndex.htmlをカスタマイズし、ブラウザ上での表示崩れの防止や、Webページとしてのレイアウト調整を実施。
-
-
-どう？添削して
