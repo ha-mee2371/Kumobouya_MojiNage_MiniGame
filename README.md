@@ -150,13 +150,13 @@
 
 ## 🆙 更新履歴  
 
-Ver1.3: [フリーモードの仕様変更とゲームバランスの調整](https://github.com/ha-mee2371/Kumobouya_MojiNage_MiniGame/issues/10)  
+Ver1.4: ゲーム内に実装していたURLの変更
 
 <details>
 <summary>さらに表示</summary>
 
 Ver1.3.1 ~ Ver1.3.10: UIの微調整  
-Ver1.3: 上記に記載  
+Ver1.3:  [フリーモードの仕様変更とゲームバランスの調整](https://github.com/ha-mee2371/Kumobouya_MojiNage_MiniGame/issues/10)  
 Ver1.2: [特定の条件下で重力値が異常となるバグの修正](https://github.com/ha-mee2371/Kumobouya_MojiNage_MiniGame/issues/8)  
 Ver1.1: [UIの微調整](https://github.com/ha-mee2371/Kumobouya_MojiNage_MiniGame/issues/3)  
 Ver1.0: Release!!!  
