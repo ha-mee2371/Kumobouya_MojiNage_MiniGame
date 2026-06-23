@@ -8,7 +8,7 @@ public class ReadmeHandler : MonoBehaviour
     public void OpenGithubLink()
     {
         // ビルド済みの方のREADME。開発の方のURLは左記READMEの中に記載。
-        string url = "https://github.com/ha-mee2371/Portfolio/tree/main/Kumobouya_Mojinage_Minigame#readme"; 
+        string url = "https://github.com/ha-mee2371/Portfolio_Kumobouya_MojiNage_MiniGame#readme"; 
         
         // ブラウザを立ち上げて、指定したURLを自動で開く
         Application.OpenURL(url);
